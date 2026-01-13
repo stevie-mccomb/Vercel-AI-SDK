@@ -1,5 +1,5 @@
 import { config as dotenv } from 'dotenv';
-import promptRoute from './routes/prompt';
+import promptRoute from './routes/prompt.js';
 import express from 'express';
 
 dotenv();
