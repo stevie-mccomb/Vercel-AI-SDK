@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/app.css">
+</head>
+<body>
+    <!-- This is our page's main content. -->
+    <main>
+        <!-- This is the container for all of our AI-streamed output. -->
+        <section class="streamed-content">
+            <!-- This is a list that displays each AI-streamed output as a list item. -->
+            <ul class="streamed-content-list"></ul>
+        </section>
+
+        <!-- This is our form for collecting our user-generated AI prompts. -->
+        <form>
+            <label for="prompt">
+                Prompt
+            </label>
+
+            <input id="prompt" type="search" autofocus />
+
+            <button type="submit">
+                Send
+            </button>
+        </form>
+    </main>
+
+    <script src="/js/app.js" type="module"></script>
+</body>
+</html>

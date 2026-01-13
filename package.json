@@ -1,0 +1,12 @@
+{
+    "type": "module",
+    "scripts": {
+        "dev": "nodemon ."
+    },
+    "dependencies": {
+        "ai": "^6.0.33",
+        "dotenv": "^17.2.3",
+        "express": "^5.2.1",
+        "nodemon": "^3.1.11"
+    }
+}
