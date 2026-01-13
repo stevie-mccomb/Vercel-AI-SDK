@@ -4,45 +4,7 @@
  * @param string prompt
  */
 const sendPrompt = async (prompt) => {
-    showSpinner();
-
-    const request = {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ prompt }),
-    };
-
-    const response = await fetch('/prompt', request);
-
-    const streamedContentList = document.querySelector('.streamed-content-list');
-    const listItem = document.createElement('li');
-    const header = document.createElement('header');
-    const paragraph = document.createElement('p');
-
-    streamedContentList.appendChild(listItem);
-    listItem.appendChild(header);
-    listItem.appendChild(paragraph);
-    
-    header.innerText = prompt;
-
-    hideSpinner();
-
-    const reader = response.body.getReader();
-    const decoder = new TextDecoder('utf-8');
-
-    while (true) {
-        const { done, value } = await reader.read();
-
-        if (done) {
-            break;
-        }
-
-        paragraph.innerText += decoder.decode(value, { stream: true });
-    }
-
-    paragraph.innerText += decoder.decode();
+    //
 };
 
 
